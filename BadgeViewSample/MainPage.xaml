@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BadgeViewSample.MainPage"
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+
+
+    <ContentPage.Resources>
+        <Style TargetType="core:SfBadgeView" x:Key="badgeView" >
+            <Setter Property="BadgeText">New User</Setter>
+            <Setter Property="BadgeSettings">
+                <Setter.Value>
+                    <core:BadgeSettings Position="TopRight"                                      
+                                         CornerRadius="5"
+                                         Offset="-15,-8"
+                                         Type="None" 
+                                         BadgeAlignment="Start" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <core:SfBadgeView HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Style="{StaticResource badgeView}">
+            <core:SfBadgeView.Content>
+                <Image  Source="People_Circle1.png"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       HeightRequest="100"
+                       WidthRequest="100"/>
+            </core:SfBadgeView.Content>
+        </core:SfBadgeView>
+    </Grid>
+
+</ContentPage>
